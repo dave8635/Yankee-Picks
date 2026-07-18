@@ -4,14 +4,23 @@ export function registerRoute(name, render) {
     routes[name] = render;
 }
 
-export function navigate(page) {
+export function navigate(page){
 
-    if (!routes[page]) {
+    if(!routes[page]){
         console.error(`Unknown page: ${page}`);
         return;
     }
 
     history.pushState({}, "", `#${page}`);
+
+    document
+        .querySelectorAll("#sidebar button")
+        .forEach(btn=>{
+            btn.classList.toggle(
+                "active",
+                btn.dataset.page===page
+            );
+        });
 
     routes[page]();
 }
