@@ -1,0 +1,29 @@
+{
+  "name": "yankee-picks",
+  "version": "2.0.0",
+  "description": "Modern inventory and profit management system",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "inventory",
+    "pos",
+    "mongodb",
+    "express",
+    "shop",
+    "sales"
+  ],
+  "author": "Dawit Kumsa",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^17.2.1",
+    "express": "^4.21.2",
+    "mongodb": "^6.18.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
